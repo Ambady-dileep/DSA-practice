@@ -123,22 +123,24 @@ print(contain_element(arr,target))
 
 #<<-------------------------------------------------------->>
 
-# def reverse_in_place(arr):
-#     left = 0
-#     right = len(arr) - 1
+def reverse_in_place(arr):
+    left = 0
+    right = len(arr) - 1
 
-#     while left < right:
-#         arr[left], arr[right] = arr[right], arr[left]
-#         left += 1
-#         right -= 1
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
 
-#     return arr
+    return arr
 
-# arr = [10, 20, 30, 40]
-# print(reverse_in_place(arr))  # Output: [40, 30, 20, 10]
+arr = [10, 20, 30, 40]
+print(reverse_in_place(arr))  # Output: [40, 30, 20, 10]
 
 
 #<<-------------------------------------------------------->>
+
+#Count even numbers in a list
 
 def find_even(arr):
     count = 0 
@@ -151,3 +153,16 @@ arr = [10, 20, 30, 40]
 
 print(find_even(arr))
 
+#<<-------------------------------------------------------->>
+
+# Check if a list is sorted in ascending order
+
+def is_sorted_ascending(arr):
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i+1]:
+            return False
+        return True
+
+arr = [10, 20, 30, 40]
+
+print(is_sorted_ascending(arr))
