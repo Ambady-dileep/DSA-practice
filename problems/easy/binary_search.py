@@ -26,4 +26,3 @@ target = 12
 index = binary_search(arr, target)
 
 print(f"\nResult: Target found at index {index}")
-

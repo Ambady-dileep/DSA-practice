@@ -24,3 +24,12 @@ def sum_of_digits(n):
     return n % 10 + sum_of_digits(n //10 )
     
 print(sum_of_digits(123))
+
+
+def reverse_string(n):
+    if len(n) == 0:
+        return ""
+    return reverse_string(n[1:]) + n[0]
+
+print(reverse_string("hello"))
+
