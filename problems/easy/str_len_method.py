@@ -17,3 +17,18 @@ def func():
     return f"Only 10 characters are allowed: {value[:10]}"
 
 print(func())
+
+
+# Slice a string in the middle using its length.
+def func():
+    value = input("Enter the value:").strip()
+    if value == "":
+        return "The string is empty. No halves to slice."
+    if len(value) == 1:
+        return f"Only one character: '{value}' (no way to slice into halves)"
+    mid = len(value)//2
+    first_half = value[:mid]
+    second_half = value[mid:]
+    return f"{first_half} and {second_half}"
+    
+print(func())
