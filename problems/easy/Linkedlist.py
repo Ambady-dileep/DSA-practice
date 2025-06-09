@@ -125,3 +125,126 @@ ll.print()
 
 ll.insert_at_beginning(1)
 ll.print()
+
+
+#####################################################################################################################################
+
+class Node():
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        
+class LinkedList():
+    def __init__(self):
+        self.head = None
+        
+    def append(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+    
+    def print(self):
+        current = self.head 
+        while current:
+            print(current.data,end="--> ")
+            current = current.next
+        print("None")
+        
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+        
+    def insert_to_position(self,pos,data):
+        new_node = Node(data)
+        if pos == 0:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        
+        count = 0
+        current = self.head
+        while current and count < pos - 1:
+            current = current.next
+            count+=1
+        
+        if current is None:
+            print("Error in current")
+            return
+        
+        new_node.next = current.next
+        current.next = new_node
+        
+    
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("No linkedlist exists")
+            return
+        self.head = self.head.next
+        
+    def delete_at_position(self, pos):
+        if self.head is None:
+            print("List is empty")
+            return
+        if pos == 0:
+            self.head = self.head.next 
+            return
+        
+        current = self.head
+        count = 0
+        
+        while current and count < pos-1:
+            current = current.next
+            count+=1
+            
+        if current is None or current.next is None:
+            print("Position out of bounds")
+            return
+            
+        current.next = current.next.next   
+        
+    def delete_by_value(self,value):
+        if self.head is None:
+            print("List is empty")
+            return
+        
+        if self.head.data == value:
+            self.head = self.head.next
+            return
+        
+        current = self.head
+        while current.next and current.next.data != value:
+            current = current.next
+            
+        if current.next is None:
+            print("Value not found")
+            return
+            
+        current.next = current.next.next
+        
+        
+ll = LinkedList()
+ll.append(10)
+ll.append(20)
+ll.append(30)
+ll.print()
+ll.reverse()
+ll.print()
+ll.insert_to_position(1,49) 
+ll.delete_at_beginning()
+ll.print()
+ll.delete_by_value(3)
+ll.print()
+ll.delete_at_position(2)
+ll.print()  
