@@ -191,7 +191,7 @@ class LinkedList():
         if self.head is None:
             print("No linkedlist exists")
             return
-        self.head = self.head.next
+        self.head = self.head.next   
         
     def delete_at_position(self, pos):
         if self.head is None:
