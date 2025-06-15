@@ -134,7 +134,7 @@
 # # Original reversed: [2, 1, 3]
 # # Copy sorted: [1, 2, 3]
 
-# ⚔️ 15 Medium Python List Method Practice Questions
+# # ⚔️ 15 Medium Python List Method Practice Questions
 
 # lst = [1, 2, 2, 3, 4, 3, 5]
 # a = []
@@ -148,3 +148,108 @@
 # a = [i*2 if i%2==0 else i for i in lst]
 # print(a)
 # # Expected Output: [1, 4, 3, 8, 5]
+
+# # Q3. From a list of words, create a list of lengths.
+# words = ["python", "is", "fun"]
+# a = []
+# for word in words:
+#     a.append(len(word))
+# print(a)
+# # Expected Output: [6, 2, 3]
+
+# # Q4. From a list of numbers, keep only the even ones.
+# lst = [1, 4, 7, 10, 13]
+# a = [i for i in lst if i%2==0]
+# print(a)
+# # Expected Output: [4, 10]
+
+# # Q5. Sort list of strings by length.
+# lst = ["apple", "kiwi", "banana"]
+# lst.sort(key=len)
+# print(lst)
+# # Expected Output: ['kiwi', 'apple', 'banana']
+
+# # 🔄 Combining & Slicing
+
+# # Q6. Combine 2 lists and remove duplicates from result.
+# a = [1, 2, 3]
+# b = [3, 4, 5]
+# c = list(set(a + b))
+# print(c)
+# # Expected Output: [1, 2, 3, 4, 5]
+
+# # Q7. Slice the list to reverse every 2 elements.   
+# lst = [10, 20, 30, 40, 50, 60]
+# result = []
+# for i in range(0,len(lst),2):
+#     result.extend(lst[i:i+2][::-1])
+# print(result)
+# # Expected Output: [20, 10, 40, 30, 60, 50]
+
+# # Q8. Check if a list is a palindrome.
+# lst = [1, 2, 3, 2, 1]
+# is_palindrome = lst == lst[::-1]
+# print(is_palindrome)
+# # Expected Output: True
+
+# # 🔍 Find/Index Practice
+ 
+# # Q9. Find the second occurrence index of 3. 
+# lst = [1, 3, 5, 3, 7]
+# a = lst.index(3,2)
+# print(a)
+# # Expected Output: 3
+
+# # Q10. Replace all "bad" with "good".
+# lst = ["bad", "good", "bad", "okay"]
+# lst = ["good" if i == "bad" else i for i in lst ]
+# print(lst)
+# # Expected Output: ['good', 'good', 'good', 'okay']
+
+# # 🧠 Nested + Logic
+
+# # Q11. Flatten this nested list.
+# lst = [[1, 2], [3, 4], [5]]
+# lst = [ j for i in lst for j in i]
+# print(lst)
+
+# # Expected Output: [1, 2, 3, 4, 5]
+
+# # Q12. Find the longest word in a list.
+# lst = ["hi", "hello", "superb"]
+# count = 0
+# result = ""
+# for i in lst:
+#     if len(i) > count:
+#         count = len(i)
+#         result = i
+# print(result)
+# print(max(lst,key=len))
+# # Expected Output: 'superb'
+
+# # Q13. Count how many lists are in the list.
+# lst = [1, [2, 3], 4, [5, 6], 7]
+# count = 0
+# for i in lst:
+#     if isinstance(i,list):
+#         count+=1
+# print(count)
+# # Expected Output: 2
+
+# # Q14. Create a list of squares for numbers from 1 to 5.
+# result = [i**2 for i in range(1,6)]
+# print(result)
+# # Expected Output: [1, 4, 9, 16, 25]
+
+# # Q15. Remove all falsy values (0, False, None, '') from list.
+# lst = [0, 1, False, 2, '', 3, None]
+# a = [i for i in lst if i]
+# print(a)
+# # Expected Output: [1, 2, 3]
+
+# Q2. Rotate a list to the right by 2
+# lst = [1, 2, 3, 4, 5]
+# k = 2
+# a = lst[-k:]+lst[:-k]
+# print(a)
+# # Expected Output: [4, 5, 1, 2, 3]
