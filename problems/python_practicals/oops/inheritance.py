@@ -97,3 +97,4 @@
 # print(s.get_score())  # ✅ Accessing private using getter
 # s.set_score(89)       # ✅ Updating private using setter
 # print(s.get_score())  # ✅ 89
+
