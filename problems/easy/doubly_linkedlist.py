@@ -41,10 +41,20 @@ class DoublyLinkedList:
             print(current.data, end = "<-->")
             current = current.prev
         print("None")
+        
+    def add_to_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        
+        if self.head is not None:
+            self.head.prev = new_node
+            
+        self.head = new_node
  
 dll = DoublyLinkedList()
 dll.append(10)
 dll.append(20)
 dll.append(30)
+dll.add_to_beginning(10)
 dll.print_forward()
 dll.print_backward()
