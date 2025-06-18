@@ -28,8 +28,23 @@ class DoublyLinkedList:
             current = current.next
         print("None")
             
+    def print_backward(self):
+        if self.head is None:
+            print("No Linkedlist exists")
+            return
+        
+        current = self.head
+        while current.next:
+            current = current.next
+        
+        while current:
+            print(current.data, end = "<-->")
+            current = current.prev
+        print("None")
+ 
 dll = DoublyLinkedList()
 dll.append(10)
 dll.append(20)
 dll.append(30)
 dll.print_forward()
+dll.print_backward()
