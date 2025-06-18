@@ -50,11 +50,24 @@ class DoublyLinkedList:
             self.head.prev = new_node
             
         self.head = new_node
+
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("No Linked List exists!")
+            return
+        if self.head.next is None:
+            self.head = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+
  
 dll = DoublyLinkedList()
 dll.append(10)
 dll.append(20)
 dll.append(30)
 dll.add_to_beginning(10)
+dll.print_forward()
+dll.delete_at_beginning()
 dll.print_forward()
 dll.print_backward()
