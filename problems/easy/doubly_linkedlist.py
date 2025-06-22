@@ -170,3 +170,4 @@ class LinkedList:
             
         current.next = new_node
         new_node.prev = current
+        
