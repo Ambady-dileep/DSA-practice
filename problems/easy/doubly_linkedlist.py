@@ -197,3 +197,112 @@ dll.append(30)
 dll.append(40)
 dll.print_forward()
 dll.print_backward()
+
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.prev = None
+        self.next = None
+        
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        
+    def append(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        
+        current = self.head
+        while current.next:
+            current = current.next
+            
+        current.next = new_node
+        new_node.prev = current 
+
+    def insert_at_beginning(self,data):
+        new_node = Node(data)
+        if self.head is not None:
+            self.head.prev = new_node
+            new_node.next = self.head
+        self.head = new_node
+        
+    def insert_at_position(self,pos,data):
+        new_node = Node(data)
+        if pos == 0:
+            new_node.next = self.head
+            if self.head:
+                self.head.prev = new_node
+            self.head = new_node
+            return
+        
+        current = self.head
+        count = 0
+        while current and count < pos - 1:
+            current = current.next
+            count+=1
+            
+        if current is None:
+            print("postion out of bound!")
+            
+        new_node.next = current.next
+        new_node.prev = current
+        
+        if current.next:
+            current.next.prev = new_node
+        current.next = new_node
+    
+    def print_forward(self):
+        if self.head is None:
+            print("No linkelist exists!")
+            return
+        current = self.head
+        while current:
+            print(current.data,end ="<-->")
+            current = current.next
+        print("None")
+        
+    def print_backward(self):
+        if self.head is None:
+            print("No linkedlist exists!")
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+            
+        while current:
+            print(current.data,end = "<-->")
+            current = current.prev
+        print("None")
+        
+    def insert_by_value(self,value):
+        if self.head is None:
+            print("List is empty!")
+            return
+        current = self.head
+        while current and current.data != value:
+            current = current.next
+            
+        if current is None:
+            print(f"Value {target_value} not found in the list.")
+            return
+        
+        new_node = Node(data)
+        new_node.next = current.next
+        new_node.prev = current
+        
+        if current.next:
+            current.next.prev = new_node
+        current.next = new_node
+        
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(40)
+dll.insert_at_position(2,25)
+dll.print_forward()
+dll.print_backward()
