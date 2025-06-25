@@ -33,3 +33,11 @@ def reverse_string(n):
 
 print(reverse_string("hello"))
 
+
+# def sum(n):
+#     if n == 0:
+#         return 0
+#     else:
+#         return n + sum(n-1)
+# print(sum(5))
+    
