@@ -56,3 +56,14 @@
 #         return False
 #     return is_palindrome(n[1:-1])
 # print(is_palindrome("medem"))
+
+#best way to do palindrome finding
+# def is_palindrome(s,left,right):
+#     if left >= right:
+#         return True
+#     if s[left] != s[right]:
+#         return False
+#     return is_palindrome(s,left+1,right-1)
+
+# word = "RaceCar".lower().replace(" ", "")  
+# print(is_palindrome(word, 0, len(word) - 1))
