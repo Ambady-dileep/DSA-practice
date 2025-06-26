@@ -87,3 +87,19 @@
 
 # ✂️ Remove vowels from a string recursively
 
+def remove_char(s, target):
+    if not s:  # Base case: if string is empty
+        return ""
+    
+    if s[0] == target:
+        return remove_char(s[1:], target)  # Skip the character
+    else:
+        return s[0] + remove_char(s[1:], target)  # Keep the character
+    
+print(remove_char("banana","n"))
+
+def title_case(s):
+    words = s.split()
+    return ' '.join(word.capitalize() for word in words)
+text = "hello world from ambady"
+print(title_case(text))
