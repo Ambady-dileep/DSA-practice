@@ -67,3 +67,23 @@
 
 # word = "RaceCar".lower().replace(" ", "")  
 # print(is_palindrome(word, 0, len(word) - 1))
+
+
+# 🔁 Print numbers from 1 to N
+
+# 🔁 Print numbers from N to 1
+
+# 🔁 Factorial using recursion
+
+# 🔁 Fibonacci using recursion
+
+# 🔁 Count digits in a number
+
+# 🔁 Reverse a number using recursion
+
+# ✂️ Delete all occurrences of a character from a string
+
+# ✂️ Remove all duplicates from a string
+
+# ✂️ Remove vowels from a string recursively
+
