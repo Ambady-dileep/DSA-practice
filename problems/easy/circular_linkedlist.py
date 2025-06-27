@@ -131,6 +131,43 @@ class CircularLinkedList:
 
         print(f"{value} not found")
 
+    def delete_at_position(self, pos):
+        if self.head is None:
+            print("Empty list")
+            return
+
+        if pos == 0:
+            self.delete_at_beginning()
+            return
+
+        current = self.head
+        count = 0
+
+        while current.next != self.head and count < pos - 1:
+            current = current.next
+            count += 1
+
+        if current.next == self.head:
+            print("Position out of bounds")
+            return
+
+        current.next = current.next.next
+
+    def delete_at_end(self):
+        if self.head is None:
+            print("List is empty")
+            return
+
+        if self.head.next == self.head:
+            self.head = None
+            return
+
+        current = self.head
+        while current.next.next != self.head:
+            current = current.next
+        current.next = self.head
+
+
 cll = CircularLinkedList()
 cll.append(10)
 cll.append(20)
@@ -138,5 +175,7 @@ cll.append(30)
 cll.add_to_beginning(5)
 cll.print_list()
 cll.delete_at_beginning()
+cll.print_list()
+cll.delete_at_position(2)
 cll.print_list()
 
