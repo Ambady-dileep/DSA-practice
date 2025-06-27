@@ -525,6 +525,24 @@ print(ll.search_by_value(30))
 #             prev = current
 #             current = next_node
 #         self.head = prev
+
+# def remove_middle(self):
+#         if not self.head or not self.head.next:
+#             self.head = None
+#             return
+        
+#         slow = self.head
+#         fast = self.head
+#         prev = None
+
+#         while fast and fast.next:
+#             fast = fast.next.next
+#             prev = slow
+#             slow = slow.next
+        
+#         # slow is now the middle node
+#         prev.next = slow.next
+
 # ll = LinkedList()
 # ll.append(10)
 # ll.append(20)
