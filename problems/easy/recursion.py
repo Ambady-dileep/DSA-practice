@@ -5,7 +5,6 @@ def factorial(n):
     
 print(factorial(4))
 
-
 def fibbonaci(n):
     if n == 0:
         return 0
