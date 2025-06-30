@@ -1,0 +1,5 @@
+# table_size = 10
+# key = "apple"
+# hash_value = hash(key)
+# ans = hash_value % table_size
+# print(ans)
