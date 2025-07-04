@@ -43,3 +43,27 @@ def reverse_string(string):
     return reversed_output
 
 print(reverse_string("boss"))
+
+# Need to practice below
+
+def is_balanced(expr):
+    stack = Stack()
+    pairs = {')': '(', '}': '{', ']': '['}
+
+    for char in expr:
+        if char in '({[':
+            stack.push(char)
+        elif char in ')}]':
+            if stack.is_empty() or stack.pop() != pairs[char]:
+                return False
+
+    return stack.is_empty()
+
+print(is_balanced("({[]})"))  # True
+print(is_balanced("([)]"))    # False
+
+
+
+
+
+

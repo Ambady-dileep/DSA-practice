@@ -3,3 +3,62 @@
 # hash_value = hash(key)
 # ans = hash_value % table_size
 # print(ans)
+
+
+{
+# Hash map v/s Hash set 
+# | Feature        | HashMap              | HashSet                    |
+# | -------------- | -------------------- | -------------------------- |
+# | **Stores**     | Key → Value pairs    | Only values (no keys)      |
+# | **Duplicates** | Keys must be unique  | Values must be unique      |
+# | **Use Case**   | Lookup by key        | Check existence of a value |
+# | **Example**    | `{“name”: “Ambady”}` | `{“apple”, “banana”}`      |
+
+# Use a HashMap when:
+# You need to associate one value with another (e.g., username → password, product → price).
+
+# Use a HashSet when:
+# You just care about unique elements and fast lookups (e.g., seen items, blocked users, duplicates remover).
+}
+
+{
+# What Is Rehashing?
+
+# 🔴 If too many items get crammed into too few buckets → collisions increase, and performance drops.
+# ✅ To fix this, rehashing is done:
+# Increase the number of buckets (usually double).
+# Recalculate (rehash) each key using the new size.
+# Re-insert them into the new table.
+
+
+# 📊 Example
+# Say you have a small hash table of size = 4, and you keep inserting items.
+
+# After a threshold (say 75% full = 3 items), rehashing triggers:
+
+# # Imagine this internal process
+# table = [None] * 4  # Original size
+
+# # Adding keys:
+# "apple" → index 0  
+# "banana" → index 1  
+# "mango" → index 1 (collision!)
+
+# Rehashing triggered:
+# ➡ Double table size → size = 8
+# ➡ Recalculate index for each key using new size
+# ➡ Insert each key into new table with updated index
+
+# ⚠️ Important: Load Factor
+# Load Factor = number of items / table size
+
+# If the load factor crosses a threshold (e.g., 0.75), rehashing occurs.
+
+# This ensures O(1) lookup time on average is maintained.
+
+# 🔥 Real Talk
+# In Python, rehashing is automatic in dict and set. You don’t need to do it manually.
+# But for interviews, custom hash tables, and performance tuning → you NEED to understand this.
+}
+
+
