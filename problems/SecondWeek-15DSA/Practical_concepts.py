@@ -1,5 +1,3 @@
-
-
 # Create a circular queue
 # Merge two sorted arrays
 # Check if a string is balanced
@@ -19,3 +17,5 @@
 # What is the main disadvantage of Selection Sort and other sorts?
 # remove longest string from array
 # check if array is sorted or not
+# implement stack
+# implement queue

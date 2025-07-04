@@ -217,3 +217,33 @@
 # Double-Ended Priority Queue
 }
 
+{
+# 💥 What is a Monotonic Stack?
+# A Monotonic Stack is a stack that keeps its elements in either increasing or decreasing order.
+
+# 📘 Two Types:
+# Type	Maintains
+# Monotonic Increasing Stack	Smallest at bottom, largest at top
+# Monotonic Decreasing Stack	Largest at bottom, smallest at top
+
+# 💥 What is a Monotonic Queue?
+# A Monotonic Queue is a double-ended queue (deque) where elements are kept in sorted order (non-increasing or non-decreasing).
+
+# | Concept             | Used For                     | Structure    | Real Use              |
+# | ------------------- | ---------------------------- | ------------ | --------------------- |
+# | **Monotonic Stack** | Next Greater/Smaller Element | Stack (LIFO) | Histogram, stock span |
+# | **Monotonic Queue** | Max/Min in Sliding Window    | Deque (FIFO) | Sliding window max    |
+}
+
+{
+# 🧠 peek vs pop – What’s the Core Difference?
+# Operation	What it Does	Removes the Element?	Time Complexity
+# peek()	Returns the element at the top/front	❌ No	✅ O(1)
+# pop()	Returns and removes the element at the top/front
+# ⚔️ Peek is non-destructive. Pop is destructive.
+}
+
+
+
+
+
