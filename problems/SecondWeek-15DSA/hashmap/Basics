@@ -61,4 +61,62 @@
 # But for interviews, custom hash tables, and performance tuning → you NEED to understand this.
 }
 
+{
+# Double Hashing (A Type of Collision Resolution)
 
+# Double Hashing is a technique to resolve collisions in open addressing
+# Double Hashing - A collision-resolution method using a 2nd hash function
+# Python dict/set handles rehashing and resizing internally, but doesn’t use double hashing
+# No, double hashing is NOT the automatic resizing (doubling) of the table. It’s a technique used to handle collisions using a second hash function.
+# So, Second Hash Function is used only:
+# 🔄 When collision happens.
+# During insertion or search (and deletion, if implemented).
+# To compute step size and probe for the next available slot.
+# If no collision → no second hash needed.
+}
+
+{
+# Always mention “Python uses TimSort which is stable” when asked about sorting — it's a pro-level insight that impresses interviewers.
+# | Algorithm                    | Stable?           |
+# | ---------------------------- | ----------------- |
+# | **Bubble Sort**              | ✅ Yes             |
+# | **Insertion Sort**           | ✅ Yes             |
+# | **Merge Sort**               | ✅ Yes             |
+# | **TimSort** (used by Python) | ✅ Yes             |
+# | **Quick Sort**               | ❌ No (by default) |
+# | **Heap Sort**                | ❌ No              |
+# | **Selection Sort**           | ❌ No              |
+}
+
+{
+# what is Stable sorting?
+# What is Timsort?
+
+# | What         | Timsort                                                           |
+# | ------------ | ----------------------------------------------------------------- |
+# | Combines     | Merge Sort + Insertion Sort                                       |
+# | Python Uses  | Yes, for `.sort()` and `sorted()`                                 |
+# | Fastest For  | Real-world data, partially sorted, small inputs                   |
+# | Stable?      | ✅ Yes (preserves equal-element order)                             |
+# | Use It When? | Always — it's default in Python, no need to manually implement it |
+
+# ⚙️ How Timsort Works — Step-by-Step
+
+# 🔹 Step 1: Divide the data into runs
+
+# A run is a small chunk of data that is already sorted (ascending or descending).
+# If not sorted, it’s sorted using insertion sort.
+# Usually run size = 32 or 64 elements (platform-dependent)
+
+# 🔹 Step 2: Sort small runs using Insertion Sort
+
+# Why? Because insertion sort is super fast for small arrays.
+# Python sorts these small chunks first.
+
+# 🔹 Step 3: Merge runs using Merge Sort
+
+# Sorted runs are then merged together.
+# Merging is done stably, preserving order of equal items.
+# But TimSort doesn’t just blindly merge everything — it uses clever rules to merge efficiently (called "galloping mode").
+
+}
