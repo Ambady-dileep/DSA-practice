@@ -15,7 +15,7 @@
 }
 
 {
-# What Is Rehashing?
+# What is Rehashing?
 
 # 🔴 If too many items get crammed into too few buckets → collisions increase, and performance drops.
 # ✅ To fix this, rehashing is done:
