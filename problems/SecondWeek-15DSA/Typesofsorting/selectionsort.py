@@ -11,6 +11,13 @@
 # arr = [4,2,7,1]
 # print(selection_sort(arr))
 
+# ❌ Disadvantages of Selection Sort
+
+# 1. Always O(n²) time
+# It makes n passes, and for each pass, it scans the rest of the list
+# So it never gets faster, even if your array is already sorted
+# Example: [1, 2, 3, 4, 5] still takes the same effort as [5, 4, 3, 2, 1]
+
 # To understand this run below
 def selection_sort(arr):
     n = len(arr)
