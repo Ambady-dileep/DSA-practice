@@ -17,6 +17,11 @@
 # Builds your recursion skill 💪
 
 # 🧠 KEY IDEA:
+# Merge Sort splits by index.
+# Quick Sort splits by pivot value.
+# 🧠 Merge Sort = "Split by half ➝ Merge"
+# 🔥 Quick Sort = "Split by pivot ➝ No Merge"
+
 # Merge Sort:
 # “Break everything into halves, sort them, then combine like a puzzle.”
 
@@ -59,9 +64,10 @@ sorted_arr = merge_sort(arr)
 print(sorted_arr)  # ➜ [1, 2, 3, 5, 8]
 
 
+
+
+
 # For understanding the code run below
-
-
 
 def merge_sort(arr, depth=0):
     indent = "  " * depth  # for visual clarity

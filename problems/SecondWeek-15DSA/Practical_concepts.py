@@ -3,10 +3,7 @@
 # Check if a string is balanced
 # Get the first non-repeating character from a string
 # Sort array alphabetically using QuickSort
-# Apps of circular queue
-# Apps of double-ended queue
-# Apps of hash table
-# Best sort algorithm
+# Best sort algorithm = Tim sort is the best
 # Use of each sorting algorithm
 # Hash table implementation
 # Time and space complexity calculations
@@ -19,3 +16,13 @@
 # check if array is sorted or not
 # implement stack
 # implement queue
+
+# 💪 TL;DR Summary
+# Need	                 Use This Sort
+
+# Fastest average case	⚡ Quick Sort
+# Stable sort needed	🧊 Merge / Timsort
+# Memory is tight	    💪 Heap / Quick
+# Already sorted	    🧽 Insertion Sort
+# Real-world use	    🔥 Timsort
+# Linked list sorting	🧊 Merge Sort
