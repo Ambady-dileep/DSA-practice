@@ -243,7 +243,19 @@
 # ⚔️ Peek is non-destructive. Pop is destructive.
 }
 
+{
 
+# 💡 What is Linear Probing?
+# Linear Probing is a collision resolution technique in open addressing where,
+# if a slot is full, we simply check the next one (linearly) until we find an empty spot.
 
+}
 
+{
+
+# 💡 What is a Circular Queue?
+# A Circular Queue is a linear data structure that connects the end of the queue back to the front, forming a circle.
+# This allows efficient use of space and avoids shifting elements like in a regular array-based queue.
+
+}
 

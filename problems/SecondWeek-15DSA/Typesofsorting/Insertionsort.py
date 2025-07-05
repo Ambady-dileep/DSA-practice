@@ -1,4 +1,16 @@
-       
+# 🧠 What is Insertion Sort?
+# Insertion Sort builds the final sorted array one element at a time,
+# just like sorting a hand of playing cards 🃏.
+# You pick one element, shift everything greater than it to the right, and insert it into its correct position.
+
+# 📊 Visualization:
+
+# Unsorted:
+# [4, 3, 5, 1]
+# First: take 3, insert before 4 → [3, 4, 5, 1]
+# Next: 5 is already in place
+# Then: insert 1 before all → [1, 3, 4, 5]
+
 def insertion_sort(arr):
     n = len(arr)
     for i in range(1, n):
@@ -15,3 +27,22 @@ def insertion_sort(arr):
 
 arr = [5, 3, 2, 1]
 print("Final Sorted Array:", insertion_sort(arr))
+
+
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]      # current element
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]  # shift right
+            j -= 1
+
+        arr[j + 1] = key  # insert key at right position
+
+    return arr
+
+arr = [5, 2, 4, 6, 1, 3]
+print(insertion_sort(arr))
+# ➜ [1, 2, 3, 4, 5, 6]
