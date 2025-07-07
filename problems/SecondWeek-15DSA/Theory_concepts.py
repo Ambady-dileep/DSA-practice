@@ -207,14 +207,7 @@
 
 {
 # Queue Operations: enqueue(), dequeue(), peek(), is_empty(), size(), display()
-
-# Types of Queues:
-
-# Simple Queue
-# Circular Queue
-# Deque
-# Priority Queue
-# Double-Ended Priority Queue
+# Types of Queues: Simple Queue, Circular Queue, Deque, Priority Queue, Double-Ended Priority Queue
 }
 
 {
