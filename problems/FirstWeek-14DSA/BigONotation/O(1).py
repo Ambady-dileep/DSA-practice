@@ -2,7 +2,7 @@
 
 # O(1) means "Constant Time Complexity."
 # 👉 No matter how big your input is, the time taken by the code stays the same.
-
+# O(1)	-->   Constant	-->  Accessing arr[i], dict[key]
 # 📌 Simple Real-Life Example:
 
 # Let’s say you walk into a room with 1000 people, and you just want to grab the first person’s name.
@@ -31,3 +31,4 @@
 # O(1) is the fastest you can get.
 
 # In interviews and real systems, aiming for O(1) solutions (when possible) shows you're efficient and smart.
+
