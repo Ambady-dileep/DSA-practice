@@ -1,3 +1,8 @@
+# 💣 Remember this line:
+# "Big O notation is the language. Time complexity is the message."
+# When you say O(n log n), you're using Big O to describe the time complexity.
+
+
 import time      # With this you get a feel for how time grows (or doesn’t grow) with bigger input — it’s how you feel Big O in real life.
 
 def get_first_element(arr):
