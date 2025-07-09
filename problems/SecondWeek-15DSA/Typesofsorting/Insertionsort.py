@@ -40,6 +40,7 @@ def insertion_sort(arr):
         arr[j + 1] = key  
     return arr
 
+
 arr = [5, 2, 4, 6, 1, 3]
 print(insertion_sort(arr))
 # ➜ [1, 2, 3, 4, 5, 6]
