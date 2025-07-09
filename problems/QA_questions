@@ -65,6 +65,19 @@
 # find the student who have the mark above 85
 
 
+# def Find_first_char_vowels(arr):
+#     convert_to_list = arr.split()
+#     vowels = "AEIOUaeiou"
+#     result = []
+#     for words in convert_to_list:
+#         if words[0] in vowels:
+#             result.append(words)
+#     return ' '.join(result)
+    
+# arr = "are you good or not"
+# print(Find_first_char_vowels(arr))
+
+
 
 
 
