@@ -106,9 +106,7 @@ print(h.get("apple"))     # 99 (updated)
 h.delete("banana")
 print(h.get("banana"))    # None
 
-
-
-###########################################################################################################################
+##########################################################################################################
 
 class HashMap:
     def __init__(self, size=10):
@@ -194,3 +192,59 @@ print(len(h))             # 3
 del h["Orange"]
 print(len(h))             # 2
 print(h)                  # Prints all buckets
+
+
+##########################################################################################################################################
+
+
+
+
+class HashMap:
+    def __init__(self,size):
+        self.size = size
+        self.table = [[] for _ in range(size)]
+        
+    def _hash(self,key):
+        return hash(key) % self.size
+        
+    def insert(self,key,value):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i,(k,v) in enumerate(bucket):
+            if k == key:
+                bucket[i]=(key,value)
+                return
+        bucket.append((key,value))
+        
+    def get(self,key):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for k,v in bucket:
+            if k == key:
+                return v
+        return None 
+        
+    def delete(self,key):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i,(k,v) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                return True
+        return False
+
+    def __str__(self):
+        result = ""
+        for i,bucket in enumerate(self.table):
+            result+=f"Index is {i}:{bucket}\n"
+        return result 
+        
+h = HashMap(10)
+h.insert("apple",10)
+h.insert("banana",20)
+h.insert("orange",30)
+print(h.get("apple"))
+print(h.delete("apple"))
+        
+        
+        
