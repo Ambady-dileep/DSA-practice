@@ -247,4 +247,3 @@ print(h.get("apple"))
 print(h.delete("apple"))
         
         
-        
