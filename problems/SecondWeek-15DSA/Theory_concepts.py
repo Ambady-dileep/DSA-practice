@@ -70,8 +70,8 @@
 }
 
 {
-# | Sorting Algorithm  | Time (Avg) | Space    | Stable? | Use Cases                                |
-# | ------------------ | ---------- | -------- | ------- | ---------------------------------------- |
+# | Sorting Algorithm  | Time (Avg) | Space    | Stable?   | Use Cases                                |
+# | ------------------ | ---------- | -------- | -------   | ---------------------------------------- |
 # | **Bubble Sort**    | O(n²)      | O(1)     | ✅ Yes   | Teaching beginners, small datasets       |
 # | **Insertion Sort** | O(n²)      | O(1)     | ✅ Yes   | Small arrays, nearly sorted data         |
 # | **Selection Sort** | O(n²)      | O(1)     | ❌ No    | When memory writes are costly            |
@@ -81,6 +81,7 @@
 # | **TimSort**        | O(n log n) | O(n)     | ✅ Yes   | Real-world hybrid sort (used in Python)  |
 # | **Radix Sort**     | O(nk)      | O(n+k)   | ✅ Yes   | Sorting integers, strings in linear time |
 }
+
 
 {
 # Double Hashing (A Type of Collision Resolution)
