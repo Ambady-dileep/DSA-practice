@@ -38,3 +38,17 @@ def bubble_sort(arr):
     
 arr =[7,3,5,6,9,1]
 print(bubble_sort(arr))
+
+
+# Practice
+def bubble_sort(arr):
+    n = len(arr)-1
+    for i in range(n):
+        for j in range(n-i):
+            if arr[j]> arr[j+1]:
+                arr[j+1],arr[j]= arr[j],arr[j+1]
+    return arr 
+    
+    
+arr = [2,4,1,7,3]
+print(bubble_sort(arr))
