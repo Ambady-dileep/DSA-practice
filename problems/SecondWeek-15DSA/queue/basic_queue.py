@@ -7,6 +7,19 @@
 # Think of a line at a movie theatre: the person who comes first gets served first.
 # A Queue is like a line — whoever gets in first, gets out first.
 
+# 🧠 Real-Life Analogy:
+
+# Think of a bus queue:
+# Front of the Line      Rear of the Line
+#      [👴, 👨, 👧]  ← people in line
+#       ↑          ↑
+#    Dequeue      Enqueue
+# 👴 entered first → leaves first (dequeue)
+
+# 👧 came last → has to wait at the end (rear)
+
+
+
 class Queue:
     def __init__(self):
         self.items = []
@@ -95,3 +108,47 @@ print("Rear:", q.peek_rear())    # ➜ 30
 
 q.dequeue()
 q.display()
+
+
+class Queue:
+    def __init__(self):
+        self.items = []
+        
+    def is_empty(self):
+        return len(self.items)==0
+        
+    def enqueue(self,value):
+        return self.items.append(value)
+        
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop(0)
+        return None 
+        
+    def display(self):
+        return self.items
+        
+    def peek_front(self):
+        if not self.is_empty():
+            return self.items[0]
+        return None 
+        
+    def peek_rear(self):
+        if not self.is_empty():
+            return self.items[-1]
+        return None
+        
+    
+q = Queue()
+print(q.is_empty())
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+q.enqueue(40)
+q.enqueue(50)
+q.dequeue()
+print(q.display())
+print("Front:", q.peek_front())  
+print("Rear:", q.peek_rear())    
+
+
