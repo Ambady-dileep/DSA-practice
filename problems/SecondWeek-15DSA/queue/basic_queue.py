@@ -19,7 +19,6 @@
 # 👧 came last → has to wait at the end (rear)
 
 
-
 class Queue:
     def __init__(self):
         self.items = []
