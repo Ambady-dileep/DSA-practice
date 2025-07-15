@@ -5,21 +5,39 @@ class Node:
         self.right = None 
 
 def insert(root, key):
-    if root is None:
+    if root is None: # To check if the first key exists or not if not then we will set the first key 
         return Node(key)
-    if root.value == key:
+    if root.value == key: # To avoid duplicates 
         return root
-    if root.value < key:
+    if root.value < key: # If the key is greater, insert into the right subtree
         root.right = insert(root.right, key)
-    else:
+    else: # If the key is smaller, insert into the left subtree
         root.left = insert(root.left, key)
     return root
+
+# 🔷 What Is inorder() Traversal?
+# It’s one of the 3 core ways to walk through a binary tree:
+# Inorder: Left → Root → Right
+# Preorder: Root → Left → Right
+# Postorder: Left → Right → Root
 
 def inorder(root):
     if root:
         inorder(root.left)
         print(root.value, end=" ")
         inorder(root.right)
+
+def preorder(root):
+    if root:
+        print(root.value,end=" ")
+        preorder(root.left)
+        preorder(root.right)
+
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.value, end=" ")
 
 def search(root, key):
     if root is None or root.value == key:
@@ -51,18 +69,6 @@ def delete(root, key):
         root.value = min_node.value
         root.right = delete(root.right, min_node.value)
     return root
-
-def preorder(root):
-    if root:
-        print(root.value,end=" ")
-        preorder(root.left)
-        preorder(root.right)
-
-def postorder(root):
-    if root:
-        postorder(root.left)
-        postorder(root.right)
-        print(root.value, end=" ")
 
 def count_nodes(root):
     if root is None:
