@@ -38,7 +38,7 @@ def postorder(root):
         postorder(root.left)
         postorder(root.right)
         print(root.value, end=" ")
-
+   
 def search(root, key):
     if root is None or root.value == key:
         return root 
@@ -55,7 +55,7 @@ def find_min(node):
 def delete(root, key):
     if root is None:
         return root
-    if key < root.value:
+    if key < root.value:     
         root.left = delete(root.left, key)
     elif key > root.value:
         root.right = delete(root.right, key)

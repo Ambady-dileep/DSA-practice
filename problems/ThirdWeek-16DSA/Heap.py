@@ -1,5 +1,6 @@
 # 🔷 What is a Heap?
 # A heap is a special kind of complete binary tree (all levels filled left to right) used to maintain priority.
+# It must follow structural property and ordering property
 # There are only two types of binary heaps:
 
 # Type	      Root Node Holds	         Used For
@@ -58,7 +59,7 @@ class MaxHeap:
     def _bubble_up(self, index):
         while index > 0:
             parent = (index - 1) // 2
-            if self.heap[index] > self.heap[parent]:  # NOTE: >
+            if self.heap[index] > self.heap[parent]: 
                 self._swap(index, parent)
                 index = parent
             else:
@@ -71,7 +72,7 @@ class MaxHeap:
             right = 2 * index + 2
             largest = index
 
-            if left < length and self.heap[left] > self.heap[largest]:  # NOTE: >
+            if left < length and self.heap[left] > self.heap[largest]:  
                 largest = left
             if right < length and self.heap[right] > self.heap[largest]:
                 largest = right
@@ -96,67 +97,67 @@ print("Remove:", h.remove())  # 50
 print("Peek after:", h.peek())# 20
 
 
-class MinHeap:
-    def __init__(self):
-        self.heap = []
+# class MinHeap:
+#     def __init__(self):
+#         self.heap = []
 
-    def insert(self, value):
-        # Add to end
-        self.heap.append(value)
-        self._bubble_up(len(self.heap) - 1)
+#     def insert(self, value):
+#         # Add to end
+#         self.heap.append(value)
+#         self._bubble_up(len(self.heap) - 1)
 
-    def peek(self):
-        return self.heap[0] if self.heap else None
+#     def peek(self):
+#         return self.heap[0] if self.heap else None
 
-    def remove(self):
-        if len(self.heap) == 0:
-            return None
-        if len(self.heap) == 1:
-            return self.heap.pop()
+#     def remove(self):
+#         if len(self.heap) == 0:
+#             return None
+#         if len(self.heap) == 1:
+#             return self.heap.pop()
 
-        # Swap root with last, remove last, then heapify
-        self._swap(0, len(self.heap) - 1)
-        min_val = self.heap.pop()
-        self._bubble_down(0)
-        return min_val
+#         # Swap root with last, remove last, then heapify
+#         self._swap(0, len(self.heap) - 1)
+#         min_val = self.heap.pop()
+#         self._bubble_down(0)
+#         return min_val
 
-    def _bubble_up(self, index):
-        while index > 0:
-            parent = (index - 1) // 2
-            if self.heap[index] < self.heap[parent]:
-                self._swap(index, parent)
-                index = parent
-            else:
-                break
+#     def _bubble_up(self, index):
+#         while index > 0:
+#             parent = (index - 1) // 2
+#             if self.heap[index] < self.heap[parent]:
+#                 self._swap(index, parent)
+#                 index = parent
+#             else:
+#                 break
 
-    def _bubble_down(self, index):
-        length = len(self.heap)
-        while True:
-            left = 2 * index + 1
-            right = 2 * index + 2
-            smallest = index
+#     def _bubble_down(self, index):
+#         length = len(self.heap)
+#         while True:
+#             left = 2 * index + 1
+#             right = 2 * index + 2
+#             smallest = index
 
-            if left < length and self.heap[left] < self.heap[smallest]:
-                smallest = left
-            if right < length and self.heap[right] < self.heap[smallest]:
-                smallest = right
+#             if left < length and self.heap[left] < self.heap[smallest]:
+#                 smallest = left
+#             if right < length and self.heap[right] < self.heap[smallest]:
+#                 smallest = right
 
-            if smallest == index:
-                break
+#             if smallest == index:
+#                 break
 
-            self._swap(index, smallest)
-            index = smallest
+#             self._swap(index, smallest)
+#             index = smallest
 
-    def _swap(self, i, j):
-        self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
+#     def _swap(self, i, j):
+#         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
 
 
-h = MinHeap()
-h.insert(10)
-h.insert(5)
-h.insert(30)
-h.insert(2)
+# h = MinHeap()
+# h.insert(10)
+# h.insert(5)
+# h.insert(30)
+# h.insert(2)
 
-print("Peek:", h.peek())     # ➤ 2
-print("Remove:", h.remove()) # ➤ 2
-print("Peek after remove:", h.peek()) # ➤ 5
+# print("Peek:", h.peek())     # ➤ 2
+# print("Remove:", h.remove()) # ➤ 2
+# print("Peek after remove:", h.peek()) # ➤ 5

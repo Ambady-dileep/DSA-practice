@@ -174,12 +174,6 @@ class HashMap:
     def __setitem__(self, key, value):
         self.insert(key, value)
 
-    # 🔹 For del h["Apple"]
-    def __delitem__(self, key):
-        success = self.delete(key)
-        if not success:
-            raise KeyError(f"{key} not found")
-
 
 h = HashMap()
 h["Apple"] = 10
@@ -193,11 +187,7 @@ del h["Orange"]
 print(len(h))             # 2
 print(h)                  # Prints all buckets
 
-
-##########################################################################################################################################
-
-
-
+######################################################################################################################################
 
 class HashMap:
     def __init__(self,size):
@@ -248,6 +238,8 @@ print(h.delete("apple"))
         
         
 
+
+
 class HashMap:
     def __init__(self,size):
         self.size = size
@@ -288,9 +280,8 @@ class HashMap:
     def display(self):
         for i, bucket in enumerate(self.table):
             print(f"Index{i}:{bucket}")
-            
-            
-            
+
+
 h = HashMap(4)
 h.insert("Apple",10)
 h.insert("Orange",20)
