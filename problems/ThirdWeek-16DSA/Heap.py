@@ -35,6 +35,7 @@
 #    /  \    /
 #  10   20  35
 
+
 class MaxHeap:
     def __init__(self):
         self.heap = [] 
@@ -49,13 +50,13 @@ class MaxHeap:
     def remove(self):
         if len(self.heap)==0:
             return None
-        if len(self.heap)==0:
+        if len(self.heap)==1:
             return self.heap.pop()
         self._swap(0,len(self.heap)-1)
         max_val = self.heap.pop()
         self._bubble_down(0)
         return max_val
-    
+
     def _bubble_up(self, index):
         while index > 0:
             parent = (index - 1) // 2
@@ -85,13 +86,13 @@ class MaxHeap:
 
     def _swap(self, i, j):
         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
+    
 
 h = MaxHeap()
 h.insert(20)
 h.insert(5)
 h.insert(50)
 h.insert(10)
-
 print("Peek:", h.peek())      # 50
 print("Remove:", h.remove())  # 50
 print("Peek after:", h.peek())# 20
