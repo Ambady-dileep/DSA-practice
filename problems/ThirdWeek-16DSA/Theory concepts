@@ -1,0 +1,21 @@
+What is an AVL Tree?
+An AVL Tree is a special kind of Binary Search Tree (BST) that keeps itself balanced all the time.
+🔥 Why AVL Tree?
+👉 In a regular BST, if you insert sorted data (like 1,2,3,4), it becomes a linked list, not a tree.
+That’s bad. Searching becomes O(n) instead of O(log n). AVL Tree fixes that by balancing the tree after every insert/delete so it stays efficient.
+⚙️ Core Concepts: ✅ Balance Factor
+For every node : Balance Factor = height(left subtree) - height(right subtree)
+Allowed values: -1, 0, or +1
+If it's more than that, the tree is unbalanced and needs rotation.
+🔁 Rotations
+When the tree is unbalanced, we rotate the nodes to restore balance.
+Case	          Rotation Type
+Left-Left (LL)	  Right Rotation
+Right-Right (RR)  Left Rotation
+Left-Right (LR)	  Left + Right Rotation
+Right-Left (RL)	  Right + Left Rotation
+🚀 Summary — Remember This:
+AVL = Self-Balancing BST
+Ensures height difference (balance factor) is always -1, 0, or +1
+Rotations fix imbalance
+Keeps operations O(log n)
