@@ -1,3 +1,8 @@
+✅ What Are Linear and Non-Linear Data Structures?
+   Term	                                  Meaning
+Linear DS	    Data elements are arranged in a sequence (one after the other).
+Non-Linear DS	Data elements are connected in a hierarchical or graph structure.
+
 What is an AVL Tree?
 An AVL Tree is a special kind of Binary Search Tree (BST) that keeps itself balanced all the time.
 🔥 Why AVL Tree?
