@@ -213,8 +213,6 @@ class MaxHeap:
     def show(self):
         print("Current Heap:", self.heap)
 
-
-
 h = MaxHeap()
 h.insert(20)
 h.insert(5)
