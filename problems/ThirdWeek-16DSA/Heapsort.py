@@ -31,7 +31,6 @@ heap_sort(arr)
 print(arr)
 
 
-
 def heapify(arr,n,i):
     largest = i
     left = 2*i+1
@@ -55,7 +54,6 @@ def heap_sort(arr):
 arr = [12,3,4,5,0,1]
 heap_sort(arr)
 print(arr)
-
 
 
 # def heapify(arr, n, i):
