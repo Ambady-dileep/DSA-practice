@@ -35,7 +35,6 @@ class Graph:
         for vertex in self.graph:
             print(f"{vertex}-->{self.graph[vertex]}")
         
-
 class Graph:
     def __init__(self):
         self.graph = {}
