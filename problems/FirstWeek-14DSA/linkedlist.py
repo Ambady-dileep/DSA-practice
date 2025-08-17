@@ -279,7 +279,249 @@ ll.print()
 print(ll.length())
 print(ll.search_by_value(30))
 
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        
+class Linkedlist:
+    def __init__(self):
+        self.head = None
+        
+    def append(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+        
+    def print(self):
+        if self.head is None:
+            return "No linkedlist exists"
+        current = self.head
+        while current:
+            print(current.data, "->", end=" ")
+            current = current.next
+        print("None")
+        
+    def reverse(self):
+        if self.head is None:
+            return "No Linkedlist exists"
+        current = self.head
+        prev =None
+        while current:
+            temp = current.next
+            current.next = prev
+            prev = current
+            current = temp
+        self.head = prev
+        
+    def delete(self, key):
+        if self.head is None:
+            return "No Linkedlist exists"
+            
+        current = self.head
+        if current.data == key: 
+            self.head = current.next
+            return
+    
+        prev = None
+        while current and current.data != key:
+            prev = current
+            current = current.next
+    
+        if current is None:
+            return "Key not found"
+    
+        prev.next = current.next
+        
+    def insertatpos(self,pos,value):
+        new_node = Node(value)
+        if pos == 0:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        current = self.head
+        index = 0 
+        while current and index < pos-1:
+            current = current.next
+            index+=1
+            
+        if current is None:
+            return print("Position out of range")
+            
+        new_node.next = current.next
+        current.next = new_node
+        
+    def length(self):
+        if self.head is None:
+            print("No Linkedlist exists")
+            return
+        count = 0 
+        current = self.head
+        while current:
+            count+=1
+            current = current.next
+        return print(f"{count}")
+        
+            
+    def middle(self):
+        if self.head is None:
+            return print("No linkedlist Exists")
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return print(f"{slow.data}")
+            
+    def detect_cycle(self):
+        slow = self.head
+        fast = self.head
+        
+        while fast and fast.next: 
+            slow = slow.next        
+            fast = fast.next.next  
+            
+            if slow == fast:    
+                print("Cycle detected ✅")
+                return True  
+        print("No cycle") 
+        return False    
 
+ll = Linkedlist()
+ll.append(10)
+ll.append(20)
+ll.append(30)
+ll.append(40)
+ll.append(50)
+ll.print()        
+# ll.reverse()
+ll.print()
+ll.delete(30)
+ll.print()
+ll.insertatpos(5,15)
+ll.print()
+ll.length()
+ll.print()
+ll.middle()
+ll.print()
+ll.head.next.next.next.next = ll.head.next 
+ll.detect_cycle()
+
+
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        
+class LinkedList:
+    def __init__(self):
+        self.head = None 
+        
+    def append(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return 
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    
+    def print(self):
+        if self.head is None:
+            print("No LinkedList Exists")
+            return 
+        current = self.head
+        while current:
+            print(current.data,end=" -> ")
+            current = current.next
+        print("None")
+        
+    def reverse(self):
+        if self.head is None:
+            return print("No LinkedList Exists")
+        prev = None
+        current = self.head
+        while current:
+            temp = current.next
+            current.next = prev
+            prev = current
+            current = temp
+        self.head = prev
+        
+    def insertAtPos(self,pos,data):
+        new_node = Node(data)
+        if pos == 0:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        current = self.head
+        index = 0 
+        while current and index < pos-1:
+            current = current.next
+            index+=1 
+        if current is None:
+            print("Position out of bound")
+            return None
+        new_node.next = current.next
+        current.next = new_node
+    
+    def length(self):
+        if self.head is None:
+            return print("No linkedlist exists!")
+        current = self.head
+        length = 0 
+        while current:
+            current = current.next
+            length+=1 
+        return print(f"{length}")
+        
+    def middle(self):
+        if self.head is None:
+            return print("No linkedlist exists")
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return print(f"{slow.data}")
+        
+    def delete(self,pos):
+        if pos == 0:
+            self.head = self.head.next
+            return 
+        current = self.head
+        index = 0
+        while current and index < pos-1:
+            current = current.next
+            index+=1 
+            
+        if current is None:
+            return print("position out of bound")
+        current.next = current.next.next
+        
+ll = LinkedList()
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.append(4)
+ll.append(5)
+ll.print()
+# ll.reverse()
+ll.print()
+ll.insertAtPos(3,6)
+ll.print()
+ll.length()
+ll.middle()
+ll.delete(2)
+ll.print()
 
 ###########################################################################################################################
 class Node:
