@@ -1,3 +1,9 @@
+# push() → insert at top
+# pop() → remove from top
+# peek() → see top without removing
+# is_empty() → check if empty
+# size() → count elements
+
 class Stack:
     def __init__(self):
         self.items = [] 
