@@ -46,3 +46,13 @@ problems/
   - Description
   - Approach
   - Code + comments
+
+MASTER PROMPT
+
+I am a beginner in DSA and want to practice [TOPIC NAME, e.g., Arrays, Strings, Linked List, Hashing, DP]. 
+Give me a structured list of coding problems that:
+1. Start with very basic logic-building drills (loops, conditions, indexing).
+2. Progress step by step into standard LeetCode-style Easy problems.
+3. End with slightly harder Easy / bridge-to-Medium problems.
+Separate the list into clear levels (Level 1: logic drills, Level 2: LeetCode Easy, Level 3: harder Easy).
+The problems should train me to think in patterns and prepare me for interviews.
