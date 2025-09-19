@@ -444,6 +444,7 @@ class LinkedList:
             current = current.next
         print("None")
         
+
     def reverse(self):
         if self.head is None:
             return print("No LinkedList Exists")
@@ -456,6 +457,7 @@ class LinkedList:
             current = temp
         self.head = prev
         
+
     def insertAtPos(self,pos,data):
         new_node = Node(data)
         if pos == 0:
@@ -472,6 +474,7 @@ class LinkedList:
             return None
         new_node.next = current.next
         current.next = new_node
+    
     
     def length(self):
         if self.head is None:

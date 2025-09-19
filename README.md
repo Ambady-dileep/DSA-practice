@@ -63,85 +63,47 @@ The problems should train me to think in patterns and prepare me for interviews.
 👉 Do these to train your loop + condition + indexing brain:
 
 Reverse an array
-
 Find the max and min in an array
-
 Count how many times a number appears
-
 Check if an array is sorted (ascending)
-
 Count vowels in a string
-
 Reverse a string
-
 Check if a string is a palindrome ("racecar" → true)
-
 Count frequency of each character in a string
-
 Remove all spaces from a string
-
 Find the first non-repeating character in a string
-
 Find the sum of all elements in an array
-
 Find the average of elements in an array
-
 Find the second largest element in an array
-
 Find the second smallest element in an array
-
 Find the index of a given element in an array
-
 Find the missing number in a sequence (e.g. [1,2,4,5] → 3)
-
 Find the duplicate number in an array (e.g. [1,2,3,3,4] → 3)
-
 Remove duplicates from an array (return new array)
-
 Merge two sorted arrays into one sorted array
-
 Find the intersection of two arrays
-
 Find the union of two arrays
-
 Left rotate an array by 1 (or by k steps)
-
 Right rotate an array by 1 (or by k steps)
-
 Find the element that appears only once (others appear twice)
-
 Count even and odd numbers in an array
 
 🟢 More Beginner-Friendly String Problems
 
 Convert a string to uppercase / lowercase
-
 Count the number of words in a string
-
 Find the longest word in a string
-
 Reverse each word in a sentence ("Hello World" → "olleH dlroW")
-
 Check if two strings are anagrams ("listen", "silent")
-
 Count how many times a character appears in a string
-
 Replace all vowels in a string with *
-
 Remove all digits from a string ("a1b2c3" → "abc")
-
 Find the most frequent character in a string
-
 Remove duplicate characters from a string ("banana" → "ban")
-
 Find the first repeating character in a string
-
 Find the last non-repeating character in a string
-
 Reverse only the vowels in a string ("hello" → "holle")
-
 Check if a string contains only digits
-
 Find the longest substring without repeating characters
 
 🔑 Why These Drills Matter
