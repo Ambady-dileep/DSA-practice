@@ -44,8 +44,6 @@ students = {
     "Arya": ["Science", "Malayalam", "English"],
     "Ravi": ["Social", "Hindi", "Biology"]
 }
-
-
 items_sold = ['pen', 'book', 'pen', 'notebook', 'book', 'pen']
 
 def most_frequent(items_sold):
@@ -76,7 +74,7 @@ def fruits_price_finder(fruit_prices):
         if value == 50:
             result.append(key)
     return f'The fruits are: {",".join(result)}'
-            
+
 print(fruits_price_finder(fruit_prices))
 
 a = [1, 2, 3, 4, 5, 2]

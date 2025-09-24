@@ -4,56 +4,56 @@
 # ans = hash_value % table_size
 # print(ans)
 
-class HashMap:
-    def __init__(self, size=10):
-        self.size = size
-        self.table = [[] for _ in range(size)]
+# class HashMap:
+#     def __init__(self, size=10):
+#         self.size = size
+#         self.table = [[] for _ in range(size)]
 
-    def _hash(self, key):
-        return hash(key) % self.size
+#     def _hash(self, key):
+#         return hash(key) % self.size
 
-    def insert(self, key, value):
-        index = self._hash(key)
-        bucket = self.table[index]
+#     def insert(self, key, value):
+#         index = self._hash(key)
+#         bucket = self.table[index]
 
-        for i, (k, v) in enumerate(bucket):
-            if k == key:
-                bucket[i] = (key, value)
-                return
-        bucket.append((key, value))
+#         for i, (k, v) in enumerate(bucket):
+#             if k == key:
+#                 bucket[i] = (key, value)
+#                 return
+#         bucket.append((key, value))
 
-    def get(self, key):
-        index = self._hash(key)
-        bucket = self.table[index]
+#     def get(self, key):
+#         index = self._hash(key)
+#         bucket = self.table[index]
 
-        for k, v in bucket:
-            if k == key:
-                return v
-        return None
+#         for k, v in bucket:
+#             if k == key:
+#                 return v
+#         return None
 
-    def delete(self, key):
-        index = self._hash(key)
-        bucket = self.table[index]
+#     def delete(self, key):
+#         index = self._hash(key)
+#         bucket = self.table[index]
 
-        for i, (k, v) in enumerate(bucket):
-            if k == key:
-                del bucket[i]
-                return True
-        return False
+#         for i, (k, v) in enumerate(bucket):
+#             if k == key:
+#                 del bucket[i]
+#                 return True
+#         return False
 
 
-h = HashMap()
+# h = HashMap()
 
-h.insert("apple", 10)
-h.insert("banana", 20)
-print(h.get("apple"))     # 10
-print(h.get("banana"))    # 20
+# h.insert("apple", 10)
+# h.insert("banana", 20)
+# print(h.get("apple"))     # 10
+# print(h.get("banana"))    # 20
 
-h.insert("apple", 99)
-print(h.get("apple"))     # 99 (updated)
+# h.insert("apple", 99)
+# print(h.get("apple"))     # 99 (updated)
 
-h.delete("banana")
-print(h.get("banana"))    # None
+# h.delete("banana")
+# print(h.get("banana"))    # None
 
 
 class HashMap:
@@ -196,7 +196,7 @@ class HashMap:
         
     def _hash(self,key):
         return hash(key) % self.size
-        
+
     def insert(self,key,value):
         index = self._hash(key)
         bucket = self.table[index]
@@ -205,7 +205,7 @@ class HashMap:
                 bucket[i]=(key,value)
                 return
         bucket.append((key,value))
-        
+
     def get(self,key):
         index = self._hash(key)
         bucket = self.table[index]
@@ -213,7 +213,7 @@ class HashMap:
             if k == key:
                 return v
         return None 
-        
+
     def delete(self,key):
         index = self._hash(key)
         bucket = self.table[index]
@@ -238,6 +238,54 @@ print(h.delete("apple"))
         
         
 
+class HashMap:
+    def __init__(self,size):
+        self.size = size
+        self.table = [[] for _ in range(size)]
+        
+    def _hash(self,key):
+        return hash(key)%self.size
+        
+    def insert(self,key,value):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for (i,(k,v)) in enumerate(bucket):
+            if k == key:
+                bucket[i]=(key,value)
+                return 
+        bucket.append((key,value))
+        
+    def get(self,key):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for k,v in enumerate(bucket):
+            if k == key:
+                return v
+        return None
+        
+    def delete(self,key):
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i,(k,v) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                return True
+            return False
+            
+    def __str__(self):
+        result = ""
+        for i,bucket in enumerate(self.table):
+            result+=f"Index is {i}: {bucket}\n"
+        return result
+        
+
+h = HashMap(10)
+h.insert("apple",10)
+h.insert("banana",20)
+h.insert("orange",30)
+print(h.get("apple"))
+print(h.delete("apple"))
+print(h)
 
 
 class HashMap:

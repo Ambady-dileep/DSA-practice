@@ -62,6 +62,5 @@ def selection_sort(arr):
     return arr 
     
 
-
 arr = [4, 2, 7, 1]
 print(selection_sort(arr))
