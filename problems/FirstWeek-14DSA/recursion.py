@@ -14,7 +14,6 @@ def fibbonaci(n):
     
 print(fibbonaci(7))
 
-
 def sum_of_digits(n):
     if n == 0:
         return 0

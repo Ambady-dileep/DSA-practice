@@ -78,14 +78,14 @@
 #         print("Inserted at head.\n")
 
 #     def delete_at_position(self, pos):
-        
+
 #         if self.head is None:
 #             print("List is empty!!")
 #             return
 #         if pos == 0:
 #             self.head = self.head.next
 #             return
-        
+
 #         current = self.head
 #         count = 0
         
@@ -169,7 +169,7 @@
 #         if pos == 0:
 #             self.head = self.head.next
 #             return
-        
+
 #         current = self.head
 #         count = 0
         
