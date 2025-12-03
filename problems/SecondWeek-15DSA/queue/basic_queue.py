@@ -15,139 +15,44 @@
 #       ↑          ↑
 #    Dequeue      Enqueue
 # 👴 entered first → leaves first (dequeue)
-
 # 👧 came last → has to wait at the end (rear)
 
 
 class Queue:
     def __init__(self):
-        self.items = []
-
-    def is_empty(self):
-        return len(self.items) == 0
-
-    def enqueue(self, value):
-        self.items.append(value)  # Add at rear
-
-    def dequeue(self):
-        if not self.is_empty():
-            return self.items.pop(0)  # Remove from front
-        return None
-
-    def peek_front(self):
-        if not self.is_empty():
-            return self.items[0]
-        return None
-
-    def peek_rear(self):
-        if not self.is_empty():
-            return self.items[-1]
-        return None
-
-    def display(self):
-        return self.items
-
-
-q = Queue()
-q.enqueue(10)
-q.enqueue(20)
-q.enqueue(30)
-
-print("Front:", q.peek_front())  # ➜ 10
-print("Rear:", q.peek_rear())    # ➜ 30
-
-q.dequeue()
-
-print("Queue now:", q.display()) # ➜ [20, 30]
-
-
-
-# For learning purpose refer below
-class Queue:
-    def __init__(self):
-        self.items = []
-
-    def is_empty(self):
-        return len(self.items) == 0
-
-    def enqueue(self, value):
-        self.items.append(value)  # Add at rear
-        print(f"{value} added at rear")
-
-    def dequeue(self):
-        if not self.is_empty():
-            removed = self.items.pop(0)  # Remove from front
-            print(f"{removed} removed from front")
-            return removed
-        else:
-            print("Queue is empty")
-            return None
-
-    def peek_front(self):
-        if not self.is_empty():
-            return self.items[0]
-        return None
-
-    def peek_rear(self):
-        if not self.is_empty():
-            return self.items[-1]
-        return None
-
-    def display(self):
-        print("Queue:", self.items)
-
-q = Queue()
-q.enqueue(10)
-q.enqueue(20)
-q.enqueue(30)
-q.display()
-
-print("Front:", q.peek_front())  # ➜ 10
-print("Rear:", q.peek_rear())    # ➜ 30
-
-q.dequeue()
-q.display()
-
-
-class Queue:
-    def __init__(self):
-        self.items = []
+        self.queue = []
         
     def is_empty(self):
-        return len(self.items)==0
-        
-    def enqueue(self,value):
-        return self.items.append(value)
-        
-    def dequeue(self):
-        if not self.is_empty():
-            return self.items.pop(0)
-        return None 
-        
-    def display(self):
-        return self.items
-        
-    def peek_front(self):
-        if not self.is_empty():
-            return self.items[0]
-        return None 
-        
-    def peek_rear(self):
-        if not self.is_empty():
-            return self.items[-1]
-        return None
-        
+        return len(self.queue) == 0 
     
+    def enqueue(self,data):
+        self.queue.append(data)
+        
+    def dequeue(self):
+        if self.is_empty():
+            return "Queue is empty"
+        return self.queue.pop(0)
+        
+    def display(self):
+        return self.queue
+        
+    def peek_rear(self):
+        if self.is_empty():
+            return "Queue is empty"
+        return self.queue[-1]
+        
+    def peek_front(self):
+        if self.is_empty():
+            return "Queue is empty"
+        return self.queue[0]
+        
 q = Queue()
-print(q.is_empty())
 q.enqueue(10)
 q.enqueue(20)
 q.enqueue(30)
 q.enqueue(40)
-q.enqueue(50)
+print(q.is_empty())
 q.dequeue()
 print(q.display())
-print("Front:", q.peek_front())  
-print("Rear:", q.peek_rear())    
-
-
+print(q.peek_rear())
+print(q.peek_front())
